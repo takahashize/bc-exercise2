@@ -7,10 +7,6 @@ Blockchain Exercise 2
 * Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files 8
 http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html
 
-
-* Java 8
-* Groovy 2.4
-
 ## Usage
 
 ```
