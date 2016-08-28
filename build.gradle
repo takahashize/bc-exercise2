@@ -1,0 +1,41 @@
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.7'
+    compile group: 'org.bitcoinj', name: 'bitcoinj-core', version: '0.14.3'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.21'
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'bin'
+        }
+    }
+}
+
+ext {
+    scripts = [
+            'd',
+            'hash',
+            'base58check',
+            'keygen',
+            'bip38',
+            'sign',
+            'verify'
+    ]
+}
+
+scripts.each { name ->
+    task ("run_$name", type: JavaExec) {
+        classpath = sourceSets.main.runtimeClasspath
+        main = name
+    }
+}
+
