@@ -15,10 +15,10 @@ git clone https://github.com/takahashize/bc-exercise2.git
 cd bc-exercise2
 
 ./gradlew run_d
-./gradlew hash
-./gradlew base58check
-./gradlew keygen
-./gradlew bip38
-./gradlew sign
-./gradlew verify
+./gradlew run_hash
+./gradlew run_base58check
+./gradlew run_keygen
+./gradlew run_bip38
+./gradlew run_sign
+./gradlew run_verify
 ```
